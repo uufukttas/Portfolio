@@ -9,14 +9,10 @@ export const metadata: Metadata = {
   description: "Portfolio Page of Ufuk Tas. Developed by Ufuk Tas.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body className="bg-black text-white">{children}</body>
     </html>
   );
-}
+};
