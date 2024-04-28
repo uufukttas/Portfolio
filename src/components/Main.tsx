@@ -5,7 +5,7 @@ import Footer from './Footer';
 
 const Main: React.FC = () => {
     return (
-        <div className={`main-container w-full h-full flex flex-col justify-evenly items-center`}>
+        <div className={`main-container w-full h-full mx-20 flex flex-col justify-evenly items-center`}>
             <Navbar />
             <Home />
             <Footer />
