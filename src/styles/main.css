@@ -1,0 +1,18 @@
+.animate_content {
+    animation: animate 3s ease;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(0.2, 0.002);
+    }
+
+    25% {
+        transform: scale(1, 0.002);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
