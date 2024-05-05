@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-const Blogs = () => {
+const Blogs: React.FC = () => {
   return (
-    <div>Blogs</div>
-  )
-}
+    <div className="blog-page-container flex h-screen bg-black text-white">
+      <div>
+        asd
+      </div>
+    </div>
+  );
+};
 
-export default Blogs
+export default Blogs;
