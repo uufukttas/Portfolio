@@ -1,0 +1,39 @@
+.timeline {
+  position: relative;
+}
+
+.timeline-line {
+  position: absolute;
+  width: 2px;
+  background-color: #000;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+}
+
+.timeline-point {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50%;
+  top: 50%;
+  left: calc(50% - 5px);
+  transform: translateY(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.timeline-content {
+  position: relative;
+  margin-left: 20px;
+}
+
+.timeline-date {
+  font-weight: bold;
+}
+
+/* You can add more styling as needed */
