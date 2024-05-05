@@ -21,36 +21,37 @@ const Typewriter: React.FC<ITypewriterProps> = ({
     const [blink, setBlink] = useState(true);
 
     useEffect(() => {
-        const timeout = setTimeout(() => {
+        const blinkTimeout = setTimeout(() => {
             setBlink(!blink);
         }, 500);
-        return () => clearTimeout(timeout);
+        return () => clearTimeout(blinkTimeout);
     }, [blink]);
 
     useEffect(() => {
-        if (subIndex === words[index].length + 1 && !reverse) {
-            setReverse(true);
+        if (subIndex === words[index].length && !reverse) {
             setTimeout(() => {
-                setSubIndex((prev) => prev - 1);
+                setReverse(true);
             }, newWordDelay);
             return;
-        };
+        }
 
         if (subIndex === 0 && reverse) {
-            setReverse(false);
-            setIndex((prev) => (prev + 1) % words.length);
+            setTimeout(() => {
+                setReverse(false);
+                setIndex((prev) => (prev + 1) % words.length);
+            }, newWordDelay);
             return;
-        };
+        }
 
-        const timeout = setTimeout(() => {
+        const typingTimeout = setTimeout(() => {
             setSubIndex((prev) => prev + (reverse ? -1 : 1));
         }, reverse ? erasingDelay : typingDelay);
 
-        return () => clearTimeout(timeout);
+        return () => clearTimeout(typingTimeout);
     }, [subIndex, index, reverse, typingDelay, erasingDelay, newWordDelay, words]);
 
     return (
-        <h1 className='text-6xl h-[60px]'>
+        <h1 className='text-6xl min-h-[60px]'>
             {`${words[index].substring(0, subIndex)}${blink ? "|" : " "}`}
         </h1>
     );
