@@ -3,11 +3,11 @@ import Navbar from './Navbar';
 import Home from './Home';
 import Footer from './Footer';
 
-const Main: React.FC = () => {
+const Main: React.FC<{ children: React.ReactNode }> = ({ children }: { children: React.ReactNode }) => {
     return (
-        <div className={`main-container w-full h-full mx-20 flex flex-col justify-around items-center`}>
+        <div className={`main-container w-full h-full flex flex-col justify-around items-center p-16`}>
             <Navbar />
-            <Home />
+            {children}
             <Footer />
         </div>
     );

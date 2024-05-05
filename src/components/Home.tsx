@@ -3,7 +3,7 @@ import Typewriter from './Typewriter';
 
 const Home: React.FC = () => {
     return (
-        <div className={`home-container w-full text-6xl flex items-center flex-col`}>
+        <div className={`homepage-container w-full text-6xl flex items-center flex-col`}>
             <Typewriter
                 words={['Engineer', 'Developer', 'Programmer', 'Coder', 'Photographer', 'Drummist']}
                 typingDelay={100}
