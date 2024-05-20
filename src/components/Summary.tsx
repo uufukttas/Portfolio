@@ -15,7 +15,7 @@ const Summary: React.FC = () => {
             </div>
             <div className={`summary-text w-2/4`}>
                 <p>
-                    I am a software engineer with a passion for creating and developing web applications. I have experience in both front-end and back-end development, and I am always looking for new challenges to tackle. I am a quick learner and a team player, and I am always eager to learn new technologies and improve my skills.
+                    I am a software engineer with extensive experience in developing dynamic interfaces, creating new components and libraries, and designing robust structural frameworks and architecture. My expertise includes troubleshooting complex issues, implementing SEO strategies, and enhancing user satisfaction while driving innovation and improving processes.
                 </p>
             </div>
         </div>
