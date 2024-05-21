@@ -21,7 +21,7 @@ const projects: Project[] = [
 
 const ProjectsPage: React.FC = () => {
     return (
-        <div className="container py-12 mx-auto">
+        <div className="container py-12 mx-auto h-full">
             <div className="flex mx-auto flex-wrap justify-center">
                 {projects.map((project) => (
                     <div key={project.id} className="h-auto my-2 mx-2">

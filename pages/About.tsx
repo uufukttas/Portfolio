@@ -15,7 +15,7 @@ const About: React.FC = () => {
         <div className={`${montserrat.className} about-page-container flex h-full bg-black text-white"`}>
             <Main>
                 <Summary />
-                <Timeline />
+                {/* <Timeline /> */}
             </Main>
         </div>
     );
