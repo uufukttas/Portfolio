@@ -12,7 +12,7 @@ const montserrat = Montserrat({
 
 const About: React.FC = () => {
     return (
-        <div className={`${montserrat.className} about-page-container h-full flex flex-col bg-[#F5F5F5] text-[#003366]`}>
+        <div className={`${montserrat.className} about-page-container flex h-full bg-black text-white"`}>
             <Main>
                 <Summary />
                 <Timeline />

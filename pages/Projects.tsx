@@ -1,11 +1,14 @@
 import React from 'react';
+import ProjectsPage from "../src/components/Projects"
+import Main from '@/src/components/Main';
+import "../app/globals.css";
 
 const Projects: React.FC = () => {
   return (
-    <div className="about-page-container page__style projects flex h-screen bg-black text-white">
-      <div>
-        asd
-      </div>
+    <div className="blog-page-container flex h-full bg-black text-white">
+      <Main>
+        <ProjectsPage />
+      </Main>
     </div>
   );
 };
