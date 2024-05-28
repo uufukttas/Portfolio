@@ -9,15 +9,15 @@ const Navbar: React.FC = () => {
         },
         {
             name: 'About',
-            url: '/about'
+            url: '/About'
         },
         {
             name: 'Blogs',
-            url: '/blogs'
+            url: '/Blogs'
         },
         {
             name: 'Projects',
-            url: '/projects'
+            url: '/Projects'
         }
     ];
 
