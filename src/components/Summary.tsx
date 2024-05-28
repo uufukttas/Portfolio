@@ -5,9 +5,10 @@ const Summary: React.FC = () => {
     return (
         <div className="summary-container flex justify-evenly items-center px-8 py-20">
             <div className="summary-photo w-1/4 relative">
-                <div className="rounded-full overflow-hidden w-full h-0" style={{ paddingBottom: '100%' }}>
+                <div className="overflow-hidden w-full h-0" style={{ paddingBottom: '100%' }}>
                     <Image
                         alt="image of me"
+                        className='rounded-full'
                         src="/profile_pic.jpeg"
                         layout="fill"
                         objectFit="cover"

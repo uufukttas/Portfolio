@@ -24,13 +24,13 @@ const ProjectsPage: React.FC = () => {
         <div className="container py-12 mx-auto h-full">
             <div className="flex mx-auto flex-wrap justify-center">
                 {projects.map((project) => (
-                    <div key={project.id} className="h-auto my-2 mx-2">
-                        <div className="rounded-lg shadow-lg h-full text-center">
+                    <div key={project.id} className="h-auto w-1/3 flex justify-center">
+                        <div className="rounded-lg shadow-lg h-full text-center my-2">
                             <Link href={project.link}>
                                 <Image alt="Project" className="hover:scale-110" height={200} src={project.image} width={300} />
+                                <div className="text-2xl font-bold my-4">{project.title}</div>
+                                <div className="text-white-700">{project.description}</div>
                             </Link>
-                            <div className="text-2xl font-bold my-4">{project.title}</div>
-                            <div className="text-white-700">{project.description}</div>
                         </div>
                     </div>
                 ))}

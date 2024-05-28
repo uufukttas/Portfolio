@@ -2,24 +2,35 @@ import React from 'react';
 import Link from 'next/link';
 
 const Navbar: React.FC = () => {
+    const navbarItems = [
+        {
+            name: 'UT',
+            url: '/'
+        },
+        {
+            name: 'About',
+            url: '/about'
+        },
+        {
+            name: 'Blogs',
+            url: '/blogs'
+        },
+        {
+            name: 'Projects',
+            url: '/projects'
+        }
+    ];
+
     return (
         <div className={`navbar-container w-full flex justify-between items-center`}>
             <ul className={`navbar-list-container flex w-full justify-evenly items-center`}>
-                <li>
-                    <Link href={`/about`}>
-                        About
-                    </Link>
-                </li>
-                <li>
-                    <Link href={`/blogs`}>
-                        Blogs
-                    </Link>
-                </li>
-                <li>
-                    <Link href={`/projects`}>
-                        Projects
-                    </Link>
-                </li>
+                {navbarItems.map((item, index) => (
+                    <li key={index} className={`navbar-list-item`}>
+                        <Link className={`border-b-4 `} href={item.url}>
+                            {item.name}
+                        </Link>
+                    </li>
+                ))}
             </ul>
         </div>
     );

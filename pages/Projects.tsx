@@ -5,7 +5,7 @@ import "../app/globals.css";
 
 const Projects: React.FC = () => {
   return (
-    <div className="blog-page-container flex h-full bg-black text-white">
+    <div className="blog-page-container flex h-screen bg-black text-white">
       <Main>
         <ProjectsPage />
       </Main>
