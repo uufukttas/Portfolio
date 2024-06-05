@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
             <li key={index} className={`contact-list-item w-full`}>
               <Link href={contact.url} className={`w-full flex items-center justify-center`}>
                 <span className={`list-item-icon px-4`}>{contact.icon}</span>
-                <span className={`list-item-name px-4`}>{contact.name}</span>
+                <span className={`list-item-name px-4 hidden md:block`}>{contact.name}</span>
               </Link>
             </li>
           ))

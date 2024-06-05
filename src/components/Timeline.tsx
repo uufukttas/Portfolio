@@ -55,7 +55,7 @@ const Timeline = () => {
     ];
 
     return (
-        <div className="timeline-container relative flex mb-20">
+        <div className="timeline-container relative flex mb-20 lg:p-12">
             <div className="line bg-gray-300 w-[10px] h-full rounded-full absolute left-1/2"></div>
             <div className="timeline-items flex w-full">
                 <div className="timeline-left flex flex-col w-1/2">
