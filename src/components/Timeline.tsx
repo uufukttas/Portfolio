@@ -4,12 +4,14 @@ import '../styles/timeline.css';
 const Timeline = () => {
     const events = [
         {
+            id: 1,
             date: "2019.09",
             details: "Conferred with a Bachelor of Science in Computer Engineering from the Balikesir University, Balikesir, Turkey",
             event: "Graduated from University",
             position: 'left'
         },
         {
+            id: 2,
             date: "2020.01",
             details: `Embarked on my professional journey as a JavaScript Developer at Insider Company, Istanbul, Turkey.
                 Responsibilities included developing and maintaining frontend components for web applications utilizing HTML, CSS, and JavaScript.
@@ -18,6 +20,7 @@ const Timeline = () => {
             position: 'right'
         },
         {
+            id: 3,
             date: "2020.03",
             details: `In addition to my role as a JavaScript developer, I increased the team’s technical know-how.
                 I provided technical support to my teammates when needed, often working in pairs on challenging tasks.
@@ -26,6 +29,7 @@ const Timeline = () => {
             position: 'left'
         },
         {
+            id: 4,
             date: "2021.06",
             event: "Sofware Engineer, Insider Company, Istanbul, Turkey",
             details: `In my third professional mission as a Software Engineer at Insider Company,
@@ -33,6 +37,7 @@ const Timeline = () => {
             position: 'right'
         },
         {
+            id: 5,
             date: "2022.06",
             event: "Started Jotform Company as Frontend Developer, Istanbul, Turkey",
             details: `In my second professional mission at JotForm as a Software Engineer,
@@ -43,6 +48,7 @@ const Timeline = () => {
             position: 'left'
         },
         {
+            id: 6,
             date: "2024.01",
             event: "Started Sharz.net as Software Engineer",
             details: `In my third professional mission at Sharznet as a Software Engineer,
@@ -55,12 +61,40 @@ const Timeline = () => {
     ];
 
     return (
-        <div className="timeline-container relative flex mb-20 lg:p-12">
-            <div className="line bg-gray-300 w-[10px] h-full rounded-full absolute left-1/2"></div>
-            <div className="timeline-items flex w-full">
-                <div className="timeline-left flex flex-col w-1/2">
+        <>
+            <div className="timeline-container relative flex mb-20 lg:p-12 hidden md:block">
+                <div className="line bg-gray-300 w-[10px] h-full rounded-full absolute left-1/2"></div>
+                <div className="timeline-items flex w-full">
+                    <div className="timeline-left flex flex-col w-1/2">
+                        {events.map((event, index) => (
+                            event.position === 'left' &&
+                            <div key={index} className={`timeline-item pr-5 self-end ${index !== 0 ? 'pt-[80px]' : ''}`}>
+                                <div className="timeline-date flex justify-end">{event.date}</div>
+                                <div className='milestone'></div>
+                                <div className="timeline-content">
+                                    <h3>{event.event}</h3>
+                                    <p>{event.details}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="timeline-right flex flex-col w-1/2">
+                        {events.map((event, index) => (
+                            event.position === 'right' &&
+                            <div key={index} className={`timeline-item pl-5 self-end ${index !== 0 ? 'pt-[80px]' : ''}`}>
+                                <div className="timeline-date flex justify-start">{event.date}</div>
+                                <div className="timeline-content">
+                                    <h2>{event.event}</h2>
+                                    <p>{event.details}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+            <div className="timeline-container relative flex mb-20 lg:p-12 block md:hidden">
+                <div className="timeline-items flex w-full flex-col">
                     {events.map((event, index) => (
-                        event.position === 'left' &&
                         <div key={index} className={`timeline-item pr-5 self-end ${index !== 0 ? 'pt-[80px]' : ''}`}>
                             <div className="timeline-date flex justify-end">{event.date}</div>
                             <div className='milestone'></div>
@@ -71,20 +105,8 @@ const Timeline = () => {
                         </div>
                     ))}
                 </div>
-                <div className="timeline-right flex flex-col w-1/2">
-                    {events.map((event, index) => (
-                        event.position === 'right' &&
-                        <div key={index} className={`timeline-item pl-5 self-end ${index !== 0 ? 'pt-[80px]' : ''}`}>
-                            <div className="timeline-date flex justify-start">{event.date}</div>
-                            <div className="timeline-content">
-                                <h2>{event.event}</h2>
-                                <p>{event.details}</p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
             </div>
-        </div>
+        </>
     );
 };
 
